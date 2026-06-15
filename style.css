@@ -82,3 +82,16 @@ li {
 .delete-btn:hover {
     color: #bd2130; /* При наведении крестик станет темнее */
 }
+
+.completed {
+    text-decoration: line-through;
+    color: #888888;
+    opacity: 0.6;
+}
+
+
+li span {
+    flex-grow: 1;
+    cursor:pointer;
+    text-align: left;
+}

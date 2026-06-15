@@ -14,6 +14,9 @@ function addTask() {
     
     // 1. Создаем контейнер для текста задачи
     const textSpan = document.createElement('span');
+    textSpan.addEventListener('click', function() {
+        textSpan.classList.toggle('completed');
+    });
     textSpan.textContent = taskText;
     newLi.appendChild(textSpan);
 
@@ -33,3 +36,11 @@ function addTask() {
 }
 
 addButton.addEventListener('click', addTask);
+
+
+inputField.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+});
+
